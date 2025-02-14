@@ -1,11 +1,11 @@
-public class P {
+public class Producto {
 
     private String n;
     private double p;
     private double i;
 
     // Constructor que inicializa los valores del Producto
-    public P(String n, double p, double i) {
+    public Producto(String n, double p, double i) {
         this.n = n;
         this.p = p;
         this.i = i;
