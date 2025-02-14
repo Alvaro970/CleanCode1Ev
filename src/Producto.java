@@ -22,7 +22,6 @@ public class Producto {
         return precioBase * (porcentajeImpuesto / 100);
     }
 
-    // Muestra detalles
     // Método para mostrar los detalles del producto, incluyendo precio final
     public void mostrarDetallesProducto() {
         System.out.println("Producto: " + nombreProducto);
