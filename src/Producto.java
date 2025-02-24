@@ -31,11 +31,6 @@ public class Producto {
     return precioBase + impuestosAplicados;
     }
 
-    // Método privado para calcular los impuestos basados en el porcentaje
-    private double calcularImpuestos(double precioBase, double porcentajeImpuesto) {
-    return precioBase * (porcentajeImpuesto / 100);
-    }
-
     // Método para mostrar los detalles del producto, incluyendo precio final
     public void mostrarDetallesProducto() {
     System.out.println("Producto: " + nombreProducto);
@@ -58,6 +53,11 @@ public class Producto {
         } else {
             throw new Excepcion ("El precio no puede ser negativo.");
         }
+    }
+
+    // Método privado para calcular los impuestos basados en el porcentaje
+    private double calcularImpuestos(double precioBase, double porcentajeImpuesto) {
+        return precioBase * (porcentajeImpuesto / 100);
     }
 }
 
