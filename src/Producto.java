@@ -4,6 +4,20 @@ public class Producto {
     private double precioBase;
     private double porcentajeImpuesto;
 
+    public double getPorcentajeImpuesto() {
+        return porcentajeImpuesto;
+    }
+
+    
+    public double getPrecioBase() {
+        return precioBase;
+    }
+
+    
+    public String getNombreProducto() {
+        return nombreProducto;
+    }
+
     // Constructor que inicializa los valores del Producto
     public Producto(String nombreProducto, double precioBase, double porcentajeImpuesto) {
         this.nombreProducto = nombreProducto;
