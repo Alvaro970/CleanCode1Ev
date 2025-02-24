@@ -44,14 +44,20 @@ public class Producto {
     System.out.println("Precio final: " + calcularPrecioFinal());
     }
 
-    // Método para actualizar el precio del producto
-    public void actualizarPrecio(double nuevoPrecio) {
-    if (nuevoPrecio >= 0) {
-        precioBase = nuevoPrecio;
-    } else {
-        System.out.println("Error: Precio negativo.");
+    // Excepción personalizada para manejo de errores
+    public static class Excepcion extends Exception {
+        public Excepcion (String mensaje) {
+            super(mensaje);
+        }
+    }
+
+    // Método para actualizar el precio del producto con manejo adecuado de errores
+    public void actualizarPrecio(double nuevoPrecio) throws Excepcion  {
+        if (nuevoPrecio >= 0) {
+            precioBase = nuevoPrecio;
+        } else {
+            throw new Excepcion ("El precio no puede ser negativo.");
+        }
     }
 }
 
-
-}
