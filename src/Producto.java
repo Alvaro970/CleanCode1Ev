@@ -12,23 +12,32 @@ public class Producto {
     }
 
     // Método para calcular el precio final después de aplicar impuestos
-    public double calcularPrecioFinal() {
-        double impuestosAplicados = calcularImpuestos(precioBase, porcentajeImpuesto);
-        return precioBase + impuestosAplicados;
+   public double calcularPrecioFinal() {
+    double impuestosAplicados = calcularImpuestos(precioBase, porcentajeImpuesto);
+    return precioBase + impuestosAplicados;
     }
 
-    // Método privado para calcular impuestos
+    // Método privado para calcular los impuestos basados en el porcentaje
     private double calcularImpuestos(double precioBase, double porcentajeImpuesto) {
-        return precioBase * (porcentajeImpuesto / 100);
+    return precioBase * (porcentajeImpuesto / 100);
     }
 
     // Método para mostrar los detalles del producto, incluyendo precio final
     public void mostrarDetallesProducto() {
-        System.out.println("Producto: " + nombreProducto);
-        System.out.println("Precio base: " + precioBase);
-        System.out.println("Porcentaje de impuestos: " + porcentajeImpuesto + "%");
-        System.out.println("Precio final: " + calcularPrecioFinal());
+    System.out.println("Producto: " + nombreProducto);
+    System.out.println("Precio base: " + precioBase);
+    System.out.println("Porcentaje de impuestos: " + porcentajeImpuesto + "%");
+    System.out.println("Precio final: " + calcularPrecioFinal());
     }
+
+    // Método para actualizar el precio del producto
+    public void actualizarPrecio(double nuevoPrecio) {
+    if (nuevoPrecio >= 0) {
+        precioBase = nuevoPrecio;
+    } else {
+        System.out.println("Error: Precio negativo.");
+    }
+}
 
 
 }
